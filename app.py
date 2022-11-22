@@ -5,8 +5,8 @@ import cv2
 
 # import mahotas.features.texture as mht
 
-import joblib
-from sklearn import preprocessing
+#import joblib
+#from sklearn import preprocessing
 
 '''
 def thresholdImg(img):
