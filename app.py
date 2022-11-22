@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request, jsonify
 
-#import numpy as np
-#import cv2
+import numpy as np
+import cv2
 
-# import mahotas.features.texture as mht
+import mahotas.features.texture as mht
 
-#import joblib
-#from sklearn import preprocessing
+import joblib
+from sklearn import preprocessing
 
-'''
+
 def thresholdImg(img):
 	th = cv2.inRange(img, (0, 0, 0), (110, 150, 150))
 	cth = cv2.cvtColor(th, cv2.COLOR_GRAY2BGR)
@@ -44,14 +44,14 @@ filenameScaler = 'scaler_knn_rot.sav'
 filenameScaler = 'scaler_lda_rot2.sav'
 #filenameScaler = 'scaler_svm_rot2.sav'
 scalerData = joblib.load(filenameScaler)
-'''
+
 #from werkzeug import secure_filename
 app = Flask(__name__)
 
 @app.route('/')
 def upload_file():
 	return render_template('index.html')
-'''	
+
 @app.route('/uploader', methods = ['GET', 'POST'])
 def uploader():
 	global loaded_model
@@ -89,6 +89,6 @@ def uploader():
 			return jsonify({'info': 'Terjadi kesalahan.', 'predicted':'Terjadi kesalahan'}), 200
 
 		return jsonify({'info': 'Upload berhasil', 'predicted': strPred }), 200
-'''
+
 if __name__ == '__main__':
    app.run()
