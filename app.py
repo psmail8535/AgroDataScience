@@ -1,10 +1,14 @@
 from flask import Flask, render_template, request, jsonify
-'''
-import numpy as np
 
+import numpy as np
 import cv2
+
 import mahotas.features.texture as mht
+
+'''
+
 import joblib
+
 from sklearn import preprocessing
 
 def thresholdImg(img):
