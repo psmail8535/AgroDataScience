@@ -3,14 +3,12 @@ from flask import Flask, render_template, request, jsonify
 import numpy as np
 import cv2
 
-'''
-import mahotas.features.texture as mht
-
+# import mahotas.features.texture as mht
 
 import joblib
-
 from sklearn import preprocessing
 
+'''
 def thresholdImg(img):
 	th = cv2.inRange(img, (0, 0, 0), (110, 150, 150))
 	cth = cv2.cvtColor(th, cv2.COLOR_GRAY2BGR)
