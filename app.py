@@ -87,4 +87,4 @@ def uploader():
 		return jsonify({'info': 'Upload berhasil', 'predicted': strPred }), 200
 
 if __name__ == '__main__':
-   app.run(host='0.0.0.0', port=5500)
+   app.run()
